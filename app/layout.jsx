@@ -1,7 +1,12 @@
-import { Inter } from "next/font/google";
+import { Inter, Roboto, Cherry_Swash, Peralta, Oranienbaum } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+export const inter = Inter({ subsets: ["latin"], weight: ["300"], style: ["normal"] });
+const roboto = Roboto({ subsets: ["latin"], style: ["italic"], weight: ["900"] });
+
+export const cherry = Cherry_Swash({ subsets: ["latin"], weight: ["400"] })
+export const peralta = Peralta({ subsets: ["latin"], weight: ["400"], style: ["normal"] })
+export const oranienbaum = Oranienbaum({ subsets: ["latin"], weight: "400" })
 
 export const metadata = {
   title: "Create Next App",
@@ -11,7 +16,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={roboto.className}>{children}</body>
     </html>
   );
 }
